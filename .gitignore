@@ -1,0 +1,12 @@
+# Local validation records and scratch work, not distributable skill content
+/.local/
+
+# Credentials: example templates may be versioned, real values may not
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
