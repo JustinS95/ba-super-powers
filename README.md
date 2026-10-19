@@ -71,7 +71,7 @@ Shared contracts: [common](references/COMMON.md), [project context](references/P
 
 The skills guide agents; integrations and test runners supply execution capabilities. GitHub support covers Issue publication, existing-Project membership, board reads and Status changes—not bidirectional synchronization or Project creation.
 
-[Validation](VALIDATION.md) documents the [static checker](scripts/Test-Library.ps1) and review scenarios. Static checks cover inventory, frontmatter, references, registry coverage and local links, not runtime skill loading or integration reliability. Authored examples are not executed tests.
+[Validation](VALIDATION.md) documents the static checkers and review scenarios. Run `bash scripts/test-library.sh` (Bash 3.2+ and standard Unix utilities, including Git Bash on Windows) or the [PowerShell checker](scripts/Test-Library.ps1). Static checks cover inventory, frontmatter, references, registry coverage and local links, not runtime skill loading or integration reliability. Authored examples are not executed tests.
 
 ## License
 
