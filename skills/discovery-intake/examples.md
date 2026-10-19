@@ -1,0 +1,37 @@
+# Discovery intake examples
+
+All people, sources and counts below are fictional supplied inputs, not collected research or library policy. Proposed learning actions have not been performed.
+
+## A reminder request with more than one possible explanation
+
+Maya, a team lead, asks: “Add reminders so people finish their tasks.” Her supplied meeting note (S1, 6 October, paragraph 2) says “about half our tasks get forgotten.” It gives no count, timeframe or definition of forgotten. That is a reported experience and a proposed solution, not evidence that forgetting causes incomplete work.
+
+A supplied observation note (S2, 5 October, steps 3–8) describes a walkthrough of eight open tasks selected from one team's queue that morning. Three had no named owner, two appeared complete in a separate spreadsheet but remained open in the queue, and three had named owners and no completion recorded. These are mutually exclusive groups in this example. Eight selected open tasks are not the team's total workload: S2 cannot establish an overall incomplete-task rate or confirm or refute Maya's “half” estimate. Nor does “no completion recorded” prove that someone forgot.
+
+The analyst first frames the problem cautiously: “The supplied material suggests difficulty assigning or recognizing completion for some tasks in this queue; the extent and consequences are not yet established. Reminders are one possible response.” The current process appears to involve a queue and a spreadsheet, but the authoritative completion record, assignment handoff and actual delay/rework consequences need clarification. A desired improvement could be fewer missed handoffs or more reliable completion visibility; the decision owner still needs to identify the intended outcome and any success measure/target.
+
+Maya's perspective alone is not enough. Relevant perspectives include people receiving tasks, the coordinator assigning them, and the operational owner reconciling the spreadsheet and queue. Before proposing more research, check whether supplied evidence covers different shifts or exception handling. If task recipients rely on assistive technology, their experience of status and notifications may matter; that need is not established by these notes. These are purposeful coverage questions, not a demand to survey everyone or a claim that a small sample represents all staff.
+
+Several explanations remain plausible:
+
+- **Unclear ownership:** the three unassigned tasks support investigating the handoff, but might be intentionally unassigned. Ask: “For these tasks, when should ownership become known, and where is that recorded?” Evidence of stalled work because nobody knew who should act would favor this explanation; evidence of intentional waiting with clear responsibility would weaken it.
+- **Status mismatch:** the two spreadsheet entries suggest completion visibility may differ across records, not necessarily that the queue is wrong. Ask: “What event makes a task complete, and how do these records get updated?” Evidence that agreed completion happened but was not reflected in the queue would favor a reconciliation/status option. If the spreadsheet records only an intermediate step, that explanation weakens.
+- **Reminder need:** the three named-owner tasks might be forgotten, waiting on prerequisites, or still within expected working time. Ask: “At the last point this task could move forward, what did the owner know, and what prevented the next step?” Evidence of actionable work missed despite clear ownership/status would favor considering reminders; blocked or not-yet-actionable work would weaken that explanation. A person's recollection alone would still not establish cause.
+
+Possible options therefore include clarifying the assignment handoff, reconciling completion records, adding reminders, or retaining the current process if these examples turn out to be legitimate waiting states. Each addresses a different explanation. Notification burden, extra reconciliation work and unknown feasibility are tradeoffs/questions, not quantified costs or proven benefits. No option is yet selected, and no reminder timing or acceptance criterion is invented.
+
+The smallest next learning step proposed is to ask the operational owner (ownership to confirm) to help review an existing, authorized, de-identified task-history extract and process description for these same eight tasks, if available. Seek assignment events, agreed completion events and waiting reasons to distinguish ownership gaps, record mismatch and actionable-but-missed work. Do not request new personal data or access a live queue. If suitable supplied records are unavailable, propose a separately authorized walkthrough with representative task recipients and the coordinator instead; no contact has been made. This would inform whether to prioritize handoff clarification, record reconciliation, reminder discovery or no change. An undocumented history or mixed results would leave the choice open; the selected open-task sample cannot estimate prevalence or prove a reminder would improve outcomes.
+
+**Provisional output now:** a problem outline, current-process gaps, competing options and the proposed evidence review are ready to draft. The sample supports investigating ownership/status as well as reminders, not a confirmed root cause. Implementation-ready reminder requirements remain unsupported. The next decision is which explanation merits further work, with the business decision owner to confirm; no formal discovery-signoff ceremony is needed to share this outline.
+
+## Small settled request: use the fast path
+
+Supplied approved copy C1 identifies one help-page sentence to replace, its exact replacement and audience. The user requests a draft change summary, not a live update. Intake states the source/version and affected page, then drafts the summary. There is no need to reopen the product problem, sample stakeholders or propose an experiment. The summary is supported within C1's scope; implementation or publication has not been performed or authorized by the draft request.
+
+## Conflicting policy and insufficient evidence: proceed provisionally
+
+A supplied operations note P1 says only coordinators may close tasks; a training note P2 says recipients close their own tasks. Neither is identified as authoritative. Three stakeholders prefer recipient closure, but preference does not resolve policy. No task histories, baseline or confirmed success target are supplied.
+
+Intake returns: “We can draft the shared assignment-to-completion outline and the proposed outcome. Who may close a task is unresolved between P1 and P2; the business policy owner is unknown and needs identification. Closure authorization is blocking for implementation-ready closure AC, not for the unaffected outline. Current completion behavior and the scale/cause of delays remain unknown.”
+
+Ask one grouped clarification: “Who owns closure policy, and which rule should govern this scope? Is there existing authorized process evidence we can use to distinguish delay from status-recording differences?” Do not choose the newest note, count stakeholder votes, invent a target, or claim the problem is validated. If no further evidence is available, deliver the labeled partial outline and retain the conflict and evidence gap in the handoff rather than drafting a speculative closure rule.
