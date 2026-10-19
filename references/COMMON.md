@@ -13,7 +13,7 @@ Read this file whenever a skill directs you here. These are reusable instruction
 
 ## Proportionate composition
 
-Use the requested skill directly. `using-ba-super-powers` is an optional entry/routing aid, not a mandatory ritual. Read shared contracts explicitly as directed; they are not automatically loaded. Compose another skill only when its capability is needed. Review small outputs locally; use cross-story adversarial matrices for connected or consequential changes. No exhaustive chain, universal two-phase chat gate, or percentage-chance trigger applies.
+Use the requested skill directly. `using-ba-super-powers` is an optional guide to choosing skills. Read shared contracts explicitly as directed; they are not automatically loaded. Compose another skill only when its capability is needed. Review small outputs locally; use cross-story adversarial matrices for connected or consequential changes. No exhaustive chain, universal two-phase chat gate, or percentage-chance trigger applies.
 
 ## Actions and claims
 

@@ -65,7 +65,7 @@ All ADO work reads the applicable [ADO contract](../references/ADO_MUTATIONS.md)
 
 ## GitHub Projects
 
-GitHub work uses the [GitHub contract](../references/GITHUB_MUTATIONS.md), not ADO field, revision, or identity assumptions. These skills target modern GitHub Projects and repository Issues; they do not replace ADO or authorize public publication.
+For GitHub workflows, follow the [GitHub contract](../references/GITHUB_MUTATIONS.md). These skills target GitHub Projects and repository Issues. Publication requires explicit approval, including the exact public content and destinations when either destination is public.
 
 | Skill | Select when |
 |---|---|

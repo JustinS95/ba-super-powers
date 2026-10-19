@@ -1,6 +1,6 @@
 ---
 name: github-story-publishing
-description: Use to publish reviewed selected local stories as repository Issues and add verified Issues to an existing modern GitHub Project, with exact public-content approval and restart-safe staged recovery.
+description: Use to publish reviewed selected local stories as repository Issues and add verified Issues to an existing GitHub Project, with exact public-content approval and restart-safe staged recovery.
 ---
 
 # GitHub Story Publishing
@@ -9,9 +9,9 @@ Publish a bounded reviewed story set as repository **Issues**, then add those Is
 
 ## Inputs and contracts
 
-Read [COMMON](../../references/COMMON.md), relevant adopted [PROJECT_CONTEXT](../../references/PROJECT_CONTEXT.md), [GITHUB_MUTATIONS](../../references/GITHUB_MUTATIONS.md), and [github-operations](../github-operations/SKILL.md). Require selected reviewed source paths/keys/versions, exact repository and owner-scoped modern Project, approved connection/actions, exact title/body transformation, privacy decision, bounded duplicate/recovery reads, and approved durable run paths. Optional: initial **existing** labels, exact Status mapping, stable publication marker, separately approved existing-schema local mapping writeback.
+Read [COMMON](../../references/COMMON.md), relevant adopted [PROJECT_CONTEXT](../../references/PROJECT_CONTEXT.md), [GITHUB_MUTATIONS](../../references/GITHUB_MUTATIONS.md), and [github-operations](../github-operations/SKILL.md). Require selected reviewed source paths/keys/versions, exact repository and owner-scoped Project, approved connection/actions, exact title/body transformation, privacy decision, bounded duplicate/recovery reads, and approved durable run paths. Optional: initial **existing** labels, exact Status mapping, stable publication marker, separately approved existing-schema local mapping writeback.
 
-Ask when content authority, source identity, target/visibility, recovery method, duplicate mapping, required data or schema is unknown. No inferred UUID, repository from working directory, automatic Task/Feature hierarchy, or business-rule invention. Missing inputs allow a labeled chat-only preparation audit, not writes.
+Ask when content authority, source identity, target/visibility, recovery method, duplicate mapping, required data or schema is unknown. No inferred UUID, repository from working directory, automatic Task/Feature hierarchy, or business-rule invention. If required inputs are missing, explain the gaps in chat and stop before making changes.
 
 ## Workflow
 

@@ -1,11 +1,11 @@
 ---
 name: github-operations
-description: Use for capability-aware GitHub Issue and modern Project reads or approved MVP mutations, with exact scope, publication privacy, durable manifests, and uncertain-outcome recovery.
+description: Use for capability-aware GitHub Issue and Project reads or approved MVP mutations, with exact scope, publication privacy, durable manifests, and uncertain-outcome recovery.
 ---
 
 # GitHub Operations
 
-Foundation for bounded GitHub work, not a client implementation or permission to connect. Use directly for access/read planning and recovery; compose [story publishing](../github-story-publishing/SKILL.md) for reviewed stories or [Project board](../github-project-board/SKILL.md) for board reads/Status. Not for ADO, Projects classic, full sync, or general GitHub administration.
+Shared guidance for planning, accessing, and verifying bounded GitHub operations. Connecting requires authorization. Use directly for access/read planning and recovery; compose [story publishing](../github-story-publishing/SKILL.md) for reviewed stories or [Project board](../github-project-board/SKILL.md) for board reads/Status. Full sync and general GitHub administration are outside scope.
 
 ## Inputs and contracts
 

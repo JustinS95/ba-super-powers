@@ -1,6 +1,6 @@
 # GitHub transport, publication, and recovery contract
 
-Read with [COMMON](COMMON.md) and relevant adopted [PROJECT_CONTEXT](PROJECT_CONTEXT.md). This contract covers modern GitHub Projects (ProjectV2), not Projects classic or ADO. These are reusable instructions, not authorization to connect or publish.
+Read with [COMMON](COMMON.md) and relevant adopted [PROJECT_CONTEXT](PROJECT_CONTEXT.md). This contract covers GitHub Projects. These are reusable instructions, not authorization to connect or publish.
 
 ## Capability, authority, and identity
 
