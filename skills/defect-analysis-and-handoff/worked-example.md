@@ -43,7 +43,7 @@ Finally, confirmation asks whether the original required outcome now holds on an
 
 ## Compact validation scenarios
 
-These are authored review expectations, not executed assistant trials or product tests. Use the [adaptable template](report-template.md) after understanding the report above.
+These are authored review expectations, not executed agent trials or product tests. Use the [adaptable template](report-template.md) after understanding the report above.
 
 | Input / variation | Expected handling |
 |---|---|

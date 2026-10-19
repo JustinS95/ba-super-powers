@@ -62,4 +62,4 @@ When saving is authorized, apply COMMON's destination/retention policy: a durabl
 - Priorities and exclusions follow stated risk and dependency evidence. Blockers and decision owners are actionable; no invented rules, coverage percentages, commands or runnable mechanics.
 - Requirements changes can expose coverage gaps or outdated expectations; they do not prove a runtime defect. Static impact review cannot establish deployment behavior or guarantee that every dependency was found.
 
-Use the [compact validation scenarios](worked-example.md#compact-validation-scenarios) for maintenance review. Authored examples/walkthroughs are not executed assistant trials or product tests.
+Use the [compact validation scenarios](worked-example.md#compact-validation-scenarios) for maintenance review. Authored examples/walkthroughs are not executed agent trials or product tests.

@@ -1,6 +1,6 @@
 # Documentation and design regression scenarios
 
-These are proposed isolated behavior trials, not executed assistant tests. Use fictional supplied material and no external credentials or write permissions. Review the relevant skill and shared contracts before assessing an actual output.
+These are proposed isolated behavior trials, not executed agent tests. Use fictional supplied material and no external credentials or write permissions. Review the relevant skill and shared contracts before assessing an actual output.
 
 | Scenario | Expected behavior | Failure signal |
 |---|---|---|

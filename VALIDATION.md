@@ -4,7 +4,7 @@
 
 Run [scripts/Test-Library.ps1](scripts/Test-Library.ps1) from PowerShell to check the expected 37-skill inventory (the first 32, three GitHub skills, requirements-change-impact and defect-analysis-and-handoff), frontmatter presence, matching directory/name, nonempty descriptions, required shared references, relative Markdown file links (outside the ignored `.local` records directory), and registry coverage. The script defaults to this repository's root and accepts an explicit `Root` directory. It requires no third-party packages and does not install or change anything.
 
-These are repository integrity checks, not a full YAML parser, Markdown renderer, security audit, or runtime skill-loading test. A passing check cannot establish that an assistant follows an instruction, or that an external service supports an operation. Review scenario documents within the skills for behavioral acceptance expectations.
+These are repository integrity checks, not a full YAML parser, Markdown renderer, security audit, or runtime skill-loading test. A passing check cannot establish that an agent follows an instruction, or that an external service supports an operation. Review scenario documents within the skills for behavioral acceptance expectations.
 
 ## Behavior trials
 
@@ -12,7 +12,7 @@ For change-impact selection, review the [worked example and compact scenarios](s
 
 For local defect analysis, review the [worked report and compact scenarios](skills/defect-analysis-and-handoff/worked-example.md): incomplete/intermittent/unsafe observations, disputed or stale oracles, duplicate comparison, severity versus priority, confirmation limits and no automatic publication/state/AC changes. These are authored expectations, not executed trials.
 
-Run isolated conversations with the intended assistant, supplying the relevant skill and linked contracts, then retain actual outputs and assess them against expected behavior. Do not provide real credentials or mutation permissions for initial trials.
+Run isolated conversations with the intended agent, supplying the relevant skill and linked contracts, then retain actual outputs and assess them against expected behavior. Do not provide real credentials or mutation permissions for initial trials.
 
 Critical cross-skill cases:
 
@@ -46,4 +46,4 @@ In a separately authorized sandbox, verify skill loading and relative-reference 
 
 For an actual check, record the library revision, environment/tool versions, supplied scenario, actual output, expected outcome, discrepancies, and method used. Keep local trial transcripts and run artifacts outside the distributable library, or in the ignored `.local` directory. Never retain secrets.
 
-Distinguish static inspection, instruction walkthroughs, actual assistant trials, installed skill-loading checks, and external integration tests. Authored scenarios and manual walkthroughs must not be described as executed assistant trials or passing product tests. A past review does not validate a later revision.
+Distinguish static inspection, instruction walkthroughs, actual agent trials, installed skill-loading checks, and external integration tests. Authored scenarios and manual walkthroughs must not be described as executed agent trials or passing product tests. A past review does not validate a later revision.
