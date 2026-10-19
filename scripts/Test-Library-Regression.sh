@@ -3,7 +3,7 @@
 set -eo pipefail
 export LC_ALL=C
 project=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
-checker=$project/scripts/test-library.sh
+checker=$project/scripts/Test-Library.sh
 mkdir -p -- "$project/.local"
 scratch=$(mktemp -d "$project/.local/checker-tests.XXXXXX")
 trap 'rm -rf -- "$scratch"' EXIT
