@@ -1,78 +1,77 @@
 # BA Super Powers
 
-A library of reusable skills that guide an AI assistant through business analysis (BA) and quality assurance (QA) work: clarifying needs, writing user stories and acceptance criteria, deriving test cases and plans, analyzing defects, and, when explicitly authorized, publishing to Azure DevOps or GitHub Projects.
+Agent skills for turning discovery notes into reviewable requirements and approved requirements into test coverage.
 
-Each skill is a Markdown instruction file that tells the assistant what evidence to gather, which steps to follow, what to produce and where to stop. The emphasis is on honest, traceable output: confirmed facts, assumptions and proposals stay separate, unknown business rules become questions rather than invented requirements, and drafting never counts as permission to publish or change anything.
+Also covers stakeholder documents and reviewed Azure DevOps and GitHub Projects workflows; see the [full skill registry](skills/REGISTRY.md).
 
 ## What the library covers
 
-| Area | Examples |
-|---|---|
-| Discovery and scope | Clarify needs, assess evidence, split large requests into coherent slices, distinguish business behavior from engineering conventions |
-| Stories and requirements | User stories, acceptance criteria, cross-story review, gap analysis, requirements synthesis, BRDs |
-| Documents and communication | Meeting summaries, process maps, design analysis, Word-to-Markdown conversion, stakeholder emails, release notes |
-| Testing | Test cases, risk-based test and UAT plans, change impact and regression selection, defect analysis and handoff, Playwright test authoring, test-evidence publication |
-| Azure DevOps | Read, create, synchronize, comment on, estimate, assess and move work items |
-| GitHub Projects | Publish reviewed stories as Issues, read a Project board, apply approved Status changes |
-| Configuration and maintenance | Optional project and team context, skill authoring, evidence-based improvement proposals |
+| Task | Skills | Outputs |
+|---|---|---|
+| Turn meeting notes into requirements | [writing-meeting-summaries](skills/writing-meeting-summaries/SKILL.md), [synthesize-requirements](skills/synthesize-requirements/SKILL.md) | Decisions, open questions, traceable requirements |
+| Prepare a feature for development | [writing-user-stories](skills/writing-user-stories/SKILL.md), [writing-acceptance-criteria](skills/writing-acceptance-criteria/SKILL.md) | Reviewable stories, testable criteria |
+| Plan acceptance testing | [writing-test-cases](skills/writing-test-cases/SKILL.md), [writing-test-plans](skills/writing-test-plans/SKILL.md) | Repeatable cases, risk-based plan |
+| Assess a requirement change | [requirements-change-impact](skills/requirements-change-impact/SKILL.md) | Affected tests, evidence gaps, regression candidates |
 
-The [skill registry](skills/REGISTRY.md) lists every skill with guidance on when to select each one.
+[KitDesk](https://github.com/JustinS95/KitDesk) is a fictional example of published output: a [Project board](https://github.com/users/JustinS95/projects/3) and a [user story](https://github.com/JustinS95/KitDesk/issues/1), not an implemented or tested application.
 
 ## Getting started
 
-1. **Get the files.** Clone or download this repository. Nothing is installed, and no credentials or accounts are configured.
-2. **Make the skills available to your assistant.** Use your assistant's documented skill or instruction mechanism, or supply the selected skill and the documents it references directly in the conversation. Skills live at `skills/<name>/SKILL.md` with `name` and `description` frontmatter. Automatic activation depends on your assistant and is not guaranteed.
-3. **Keep the shared references.** Skills link to shared contracts in the root `references` directory through relative paths. Preserve that layout when copying or installing; copying a single skill folder on its own breaks those links unless you supply the referenced documents separately.
-4. **Pick a skill and supply your material.** Give the assistant the request and whatever evidence you have: notes, an existing story, a design, a requirements document. Project configuration is optional for standalone writing.
+Clone or download [this repository](https://github.com/JustinS95/ba-super-powers.git), then use one of the setups below. Keep the skill folders, their supporting files and the shared `references/` directory together; copying only `SKILL.md` breaks the relative links.
 
-## Choosing a skill
+### Claude Code
 
-Start from the [skill registry](skills/REGISTRY.md). It groups the skills by area, says when to select each one and shows example compositions, such as a new feature moving from discovery to stories to review. Use the skill that matches the task directly; there is no mandatory entry chain. [using-ba-super-powers](skills/using-ba-super-powers/SKILL.md) is an optional routing aid if you are unsure where to start. Each skill identifies the shared references it needs; read those references when directed. Load other skills only when their capability is needed. For a short orientation to story writing, see the [user story guide](WRITING_USER_STORIES.md).
+Copy the contents of the repository's `skills/` directory into your project's `.claude/skills/`, and its `references/` directory into `.claude/references/`. Preserve this layout, keeping any existing skills and references intact:
 
-## Worked example
+```text
+your-project/
+└── .claude/
+    ├── skills/
+    │   ├── writing-user-stories/SKILL.md
+    │   └── ...
+    └── references/
+        ├── COMMON.md
+        └── ...
+```
 
-[Submitting a small request](skills/writing-test-cases/worked-example.md) is a fictional walkthrough shared by the test-case and test-plan skills. It shows how to choose a small set of useful tests around a quantity limit, ownership and state, rather than writing more tests, and it states plainly that the tests have not been run. It is a good first read to see the level of rigor the skills aim for.
+Start Claude Code in that project and invoke `/writing-user-stories`. See the official [skill discovery and invocation guide](https://code.claude.com/docs/en/skills).
 
-## Key boundaries
+### OpenCode V2
 
-- Source evidence, assumptions, proposals, and approved decisions are distinct.
-- Unknown business rules remain questions, not invented acceptance criteria.
-- Drafting is not permission to publish, run tests, change a board, or delete files.
-- Approved mutations use scoped plans, durable recovery records, concurrency checks, and verification.
-- Test execution, screenshots, uploaded evidence, satisfied criteria, and release approval are separate claims.
-- Project configuration is optional for standalone writing. Operational tasks need the actual applicable process, identities, targets, and permissions.
-- No particular operating system, shell, integration provider, authentication method, registry, or project hierarchy is assumed universally.
+Keep the clone intact. Add its absolute `skills/` path to the `skills` array in your project's `opencode.jsonc`, merging with any existing entries. For example, if the clone is at `C:/work/ba-super-powers`:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": ["C:/work/ba-super-powers/skills"]
+}
+```
+
+Start OpenCode in that project and mention `@writing-user-stories` in your prompt. The [V2 skills guide](https://opencode.ai/v2/docs/skills) documents external paths and explicit loading.
+
+### Choose a task and provide the input
+
+The [skill registry](skills/REGISTRY.md) lists task triggers and useful combinations. Select the matching skill directly; [using-ba-super-powers](skills/using-ba-super-powers/SKILL.md) can help when you are unsure. Attach or paste the relevant notes, approved criteria or requirement versions with one of these example prompts:
+
+> Use writing-user-stories to turn these discovery notes into stories. Flag unresolved business rules.
+
+> Use writing-test-cases to derive manual tests from these approved acceptance criteria.
+
+> Use requirements-change-impact to compare these requirement versions and propose regression coverage.
+
+For more examples, see the [user story guide](WRITING_USER_STORIES.md) and the fictional [test-case walkthrough](skills/writing-test-cases/worked-example.md).
+
+## Scope and safeguards
+
+Skills distinguish source evidence from assumptions and proposals. Publishing, board changes and test execution require explicit scope and approval; review public content for privacy before publication. Generated tests, board Status and release approval are not evidence of successful execution.
 
 Shared contracts: [common](references/COMMON.md), [project context](references/PROJECT_CONTEXT.md), [ADO mutations](references/ADO_MUTATIONS.md), [GitHub mutations](references/GITHUB_MUTATIONS.md), and [test evidence](references/TEST_EVIDENCE.md).
 
-## GitHub portfolio workflow
+## Validation and limitations
 
-Use GitHub Projects and repository Issues to publish reviewed stories, organize the backlog, and make approved Status changes.
+The skills guide agents; integrations and test runners supply execution capabilities. GitHub support covers Issue publication, existing-Project membership, board reads and Status changes—not bidirectional synchronization or Project creation.
 
-1. Draft and review stories and acceptance criteria using the existing writing skills.
-2. Use [github-story-publishing](skills/github-story-publishing/SKILL.md) to prepare an exact publication plan, review everything for public exposure, and publish only after separate destination/action approval.
-3. Use [github-project-board](skills/github-project-board/SKILL.md) to read the selected Project or apply approved Status changes. [github-operations](skills/github-operations/SKILL.md) supplies shared access, verification, and recovery mechanics.
-4. Link actual implementation and test evidence when available; a board card or a Done label is not proof of implementation or successful tests.
-
-Scope: publish reviewed stories as repository Issues, add them to an existing user- or organization-owned Project, read Project items, and apply approved Status values. Bidirectional synchronization, issue-body updates, Project creation, and automatic ADO-to-GitHub mirroring are outside scope. These skills do not configure repositories, Projects, or credentials. A public Project does not make private-repository Issues visible.
-
-Example requests, with actual source paths and targets supplied by the user:
-
-> Prepare a no-write plan to publish these reviewed stories as Issues in my selected public repository and add them to my selected Project. Show the exact public content, identity mappings, and any privacy concerns. Do not publish yet.
-
-> Read that Project and summarize the story Issues by their discovered Status values. Report pagination or visibility gaps. Do not change Issue state or Project fields.
-
-### Demonstration: KitDesk
-
-[KitDesk](https://github.com/JustinS95/KitDesk) is a fictional demonstration project that shows this workflow's output: a [project board](https://github.com/users/JustinS95/projects/3) and an [example published user story](https://github.com/JustinS95/KitDesk/issues/1). It currently shows story publication and Project membership, not an implemented or tested application or validation of every skill and integration.
-
-## Review and validation
-
-[Validation](VALIDATION.md) describes the static checker, reusable regression scenarios, and integration checks. The PowerShell checker at [scripts/Test-Library.ps1](scripts/Test-Library.ps1) verifies the skill inventory, frontmatter, shared references, registry coverage and relative file links. Skill-level scenario files are maintenance aids, not extra instructions that every task must load.
-
-## Limitations
-
-These skills guide an assistant; they do not implement an ADO/GitHub client or test runner. Static checks verify repository consistency, not whether an assistant loads or follows the instructions or an integration works. Examples and scenarios describe expected behavior, not successful test runs.
+[Validation](VALIDATION.md) documents the [static checker](scripts/Test-Library.ps1) and review scenarios. Static checks cover inventory, frontmatter, references, registry coverage and local links, not runtime skill loading or integration reliability. Authored examples are not executed tests.
 
 ## License
 

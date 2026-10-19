@@ -6,7 +6,7 @@ Use [writing-user-stories](skills/writing-user-stories/SKILL.md) for new stories
 
 Supply the problem, relevant actors, desired outcome, known behavior, boundaries, and available source evidence. An existing story, design, or rough request is enough to begin. A completed discovery document, team roster, UUID registry, or ADO connection is not required for a conversational draft.
 
-The assistant should reuse supplied information, ask only consequential questions, and distinguish confirmed behavior from reported current behavior, assumptions, and proposals. Do not invent defaults for unknown field limits, access rules, or deadlines. A requested provisional draft can proceed while affected decisions remain visible and unresolved.
+The agent should reuse supplied information, ask only consequential questions, and distinguish confirmed behavior from reported current behavior, assumptions, and proposals. Do not invent defaults for unknown field limits, access rules, or deadlines. A requested provisional draft can proceed while affected decisions remain visible and unresolved.
 
 ## What a useful story contains
 
