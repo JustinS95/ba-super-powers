@@ -2,7 +2,15 @@
 
 ## Static checks
 
-Run [scripts/Test-Library.ps1](scripts/Test-Library.ps1) from PowerShell to check the expected 37-skill inventory (the first 32, three GitHub skills, requirements-change-impact and defect-analysis-and-handoff), frontmatter presence, matching directory/name, nonempty descriptions, required shared references, relative Markdown file links (outside the ignored `.local` records directory), and registry coverage. The script defaults to this repository's root and accepts an explicit `Root` directory. It requires no third-party packages and does not install or change anything.
+Run [scripts/Test-Library.ps1](scripts/Test-Library.ps1) from PowerShell or [scripts/Test-Library.sh](scripts/Test-Library.sh) from Bash to check the expected 37-skill inventory (the first 32, three GitHub skills, requirements-change-impact and defect-analysis-and-handoff), frontmatter presence, matching directory/name, nonempty descriptions, required shared references, relative Markdown file links (outside the ignored `.local` records directory), and registry coverage. Both default to this repository's root, work from other working directories, return zero on success and nonzero on failure, and do not install or change anything.
+
+```bash
+bash scripts/Test-Library.sh
+bash scripts/Test-Library.sh --root "/path/to/library"
+bash scripts/Test-Library-Regression.sh
+```
+
+The Bash checker needs Bash 3.2+ and standard Unix `awk`, `find`, `cat`, and `tr`; no PowerShell, Python, GNU-specific options, or package installation is required. On Windows use Git Bash (not `sh`). It accepts `--root`, `-r`, or `-Root`; the PowerShell version accepts `-Root`. Root paths should use the chosen shell's path notation. File existence follows the host filesystem's case sensitivity. Git metadata is excluded from Markdown traversal. The regression script creates and removes isolated fixtures under ignored `.local/` and additionally needs `cp`, `rm`, `mkdir`, `mktemp`, `touch`, and `grep`. Optionally set `TEST_LIBRARY_POWERSHELL` to an approved PowerShell executable to compare fixture exit codes, expected diagnostics, and issue counts against the original checker; without it, PowerShell execution parity is explicitly skipped. Neither script changes PowerShell execution policy.
 
 These are repository integrity checks, not a full YAML parser, Markdown renderer, security audit, or runtime skill-loading test. A passing check cannot establish that an agent follows an instruction, or that an external service supports an operation. Review scenario documents within the skills for behavioral acceptance expectations.
 
