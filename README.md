@@ -47,14 +47,14 @@ Shared contracts: [common](references/COMMON.md), [project context](references/P
 
 ## GitHub portfolio workflow
 
-GitHub support is additive; the ADO workflows remain available. Use modern user- or organization-owned GitHub Projects, with repository Issues as the public story records rather than draft-only cards.
+Use GitHub Projects and repository Issues to publish reviewed stories, organize the backlog, and make approved Status changes.
 
 1. Draft and review stories and acceptance criteria using the existing writing skills.
 2. Use [github-story-publishing](skills/github-story-publishing/SKILL.md) to prepare an exact publication plan, review everything for public exposure, and publish only after separate destination/action approval.
 3. Use [github-project-board](skills/github-project-board/SKILL.md) to read the selected Project or apply approved Status changes. [github-operations](skills/github-operations/SKILL.md) supplies shared access, verification, and recovery mechanics.
 4. Link actual implementation and test evidence when available; a board card or a Done label is not proof of implementation or successful tests.
 
-No repository, Project, or credentials are configured by these skills. A public Project does not make private-repository Issues visible. This first version does not provide bidirectional synchronization, issue-body updates, Project creation, or automatic ADO-to-GitHub mirroring.
+Scope: publish reviewed stories as repository Issues, add them to an existing user- or organization-owned Project, read Project items, and apply approved Status values. Bidirectional synchronization, issue-body updates, Project creation, and automatic ADO-to-GitHub mirroring are outside scope. These skills do not configure repositories, Projects, or credentials. A public Project does not make private-repository Issues visible.
 
 Example requests, with actual source paths and targets supplied by the user:
 
@@ -72,7 +72,7 @@ Example requests, with actual source paths and targets supplied by the user:
 
 ## Limitations
 
-These are instructional skills, not an implemented ADO/GitHub client or test runner. Operational guarantees depend on the assistant and available tools actually following the instructions. A passing static check shows the files are consistent; it does not show that an assistant loads a skill, follows it correctly, or that an external integration works. Worked examples and scenarios are authored expectations, not executed trials, and no production integration or runtime skill-loading test is implied.
+These skills guide an assistant; they do not implement an ADO/GitHub client or test runner. Static checks verify repository consistency, not whether an assistant loads or follows the instructions or an integration works. Examples and scenarios describe expected behavior, not successful test runs.
 
 ## License
 

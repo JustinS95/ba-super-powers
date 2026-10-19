@@ -1,11 +1,11 @@
 ---
 name: github-project-board
-description: Use for bounded modern GitHub Project item and Status reads, or an approved exact single-select Status update with discovered IDs, narrow baseline checks, and explicit residual-race handling.
+description: Use for bounded GitHub Project item and Status reads, or an approved exact single-select Status update with discovered IDs, narrow baseline checks, and explicit residual-race handling.
 ---
 
 # GitHub Project Board
 
-Read selected modern Project items or apply exact approved **Status** values. A board column is a presentation of a Project field, not an ADO state mapping or GitHub Issue state. No inferred readiness/blocker policy, general field editor, or Issue close/reopen automation.
+Read selected GitHub Project items and update exact approved **Status** values. A board column presents a Project field; Project Status and repository Issue state are distinct. Readiness or blocker assessment, other field updates, and Issue changes are outside scope.
 
 ## Inputs and contracts
 
