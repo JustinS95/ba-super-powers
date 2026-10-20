@@ -16,7 +16,8 @@ $expected = @(
     'ado-operations', 'fetch-ado-work-items', 'ado-work-item-creation',
     'sync-stories-from-ado', 'comment-on-ado-item', 'ado-move-board-item',
     'ado-board-blocker-analysis', 'ado-ready-for-work-analysis', 'ado-estimate',
-    'github-operations', 'github-story-publishing', 'github-project-board'
+    'github-operations', 'github-story-publishing', 'github-project-board',
+    'github-story-update'
 )
 $issues = [System.Collections.Generic.List[string]]::new()
 $skillRoot = Join-Path $Root 'skills'

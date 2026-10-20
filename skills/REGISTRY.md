@@ -72,6 +72,7 @@ For GitHub workflows, follow the [GitHub contract](../references/GITHUB_MUTATION
 | [github-operations](github-operations/SKILL.md) | Establish scoped GitHub access, discovery, publication plans, verification, or recovery |
 | [github-story-publishing](github-story-publishing/SKILL.md) | Publish reviewed stories as repository Issues and add them to a selected Project |
 | [github-project-board](github-project-board/SKILL.md) | Read a bounded Project snapshot or apply approved exact Status changes |
+| [github-story-update](github-story-update/SKILL.md) | Change a published story Issue's title/body or add a new comment, with baseline check and read-back |
 
 ## Example compositions
 
