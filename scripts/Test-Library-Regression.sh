@@ -28,7 +28,7 @@ while IFS= read -r name; do
     printf -- '---\nname: %s\ndescription: Test skill\n---\nCOMMON.md GITHUB_MUTATIONS.md\n' "$name" > "$base/skills/$name/SKILL.md"
     printf '[%s](%s/SKILL.md)\n' "$name" "$name" >> "$base/skills/REGISTRY.md"
 done <<< "$inventory"
-[[ $count == 37 ]] || { printf 'FAIL: original inventory oracle\n' >&2; exit 1; }
+[[ $count == 38 ]] || { printf 'FAIL: original inventory oracle\n' >&2; exit 1; }
 for name in COMMON.md PROJECT_CONTEXT.md ADO_MUTATIONS.md GITHUB_MUTATIONS.md TEST_EVIDENCE.md; do
     : > "$base/references/$name"
 done
@@ -57,7 +57,7 @@ check() {
     printf 'PASS regression: %s\n' "$label"
 }
 reset_fixture
-check 'clean inventory from original checker' 0 'PASS: 37 skills; 43 Markdown files;'
+check 'clean inventory from original checker' 0 'PASS: 38 skills; 44 Markdown files;'
 # CRLF, quoted names, UTF-8 content, relative links, directory targets, URI skips,
 # anchors, percent decoding, and code examples are all valid in one fixture.
 printf -- '---\r\nname: "discovery-intake"\r\ndescription: Test\r\n---\r\ncommon.md\r\n' > "$fixture/skills/discovery-intake/SKILL.md"
@@ -91,7 +91,7 @@ check 'unexpected skill' 1 'Unexpected skill: unexpected'
 reset_fixture
 mkdir "$fixture/skills/nested"
 cp -R "$fixture/skills/discovery-intake" "$fixture/skills/nested/"
-check 'duplicate nested skill counts' 1 'Expected 37 skills, found 38'
+check 'duplicate nested skill counts' 1 'Expected 38 skills, found 39'
 reset_fixture
 printf 'No header\n' > "$fixture/skills/discovery-intake/SKILL.md"
 check 'missing frontmatter' 1 'Missing frontmatter:'
@@ -131,7 +131,7 @@ check 'NUL escape is invalid' 1 'Invalid relative link'
 reset_fixture
 # The default root is relative to the script, never the caller working directory.
 (cd "$scratch" && bash "$checker") > "$scratch/default.log"
-grep -q '^PASS: 37 skills;' "$scratch/default.log"
+grep -q '^PASS: 38 skills;' "$scratch/default.log"
 checks=$((checks + 1)); printf 'PASS regression: default root from another working directory\n'
 bash "$checker" -Root "$fixture" > "$scratch/alias.log"
 grep -q '^PASS:' "$scratch/alias.log"

@@ -35,6 +35,7 @@ expected=(
     sync-stories-from-ado comment-on-ado-item ado-move-board-item
     ado-board-blocker-analysis ado-ready-for-work-analysis ado-estimate
     github-operations github-story-publishing github-project-board
+    github-story-update
 )
 issues=0
 fail() { printf 'FAIL: %s\n' "$*"; issues=$((issues + 1)); }

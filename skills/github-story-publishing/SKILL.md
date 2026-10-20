@@ -5,7 +5,7 @@ description: Use to publish reviewed selected local stories as repository Issues
 
 # GitHub Story Publishing
 
-Publish a bounded reviewed story set as repository **Issues**, then add those Issues to one selected existing Project. Not draft issues, a full sync engine, or permission to update existing Issue text. Existing mapped Issues may be verified and added; they must not be recreated.
+Publish a bounded reviewed story set as repository **Issues**, then add those Issues to one selected existing Project. Not draft issues, a full sync engine, or permission to update existing Issue text; use [github-story-update](../github-story-update/SKILL.md) for approved edits or comments after publication. Existing mapped Issues may be verified and added; they must not be recreated.
 
 ## Inputs and contracts
 
@@ -28,4 +28,4 @@ Ask when content authority, source identity, target/visibility, recovery method,
 
 No-write publication table/exact payload review; after authorized execution, manifest/checkpoints, one-to-one source-to-Issue and Issue-to-Project-item mapping, optional Status/writeback results, missing/unexpected/duplicate identities, content differences, verification timestamps/completeness and actual retained paths/actions. Canonical content is unchanged unless the separate writeback is approved. [Scenarios](scenarios.md) cover happy, privacy, conflict and recovery paths.
 
-MVP excludes Issue title/body edits, comments, assignments, estimates, Issue types/fields, sub-issues/dependency automation, state changes, Project/field creation, visibility changes, archive/delete and bidirectional sync. Do not send excluded fields even if the API supports them.
+This skill excludes Issue title/body edits and comments (see github-story-update), assignments, estimates, Issue types/fields, sub-issues/dependency automation, state changes, Project/field creation, visibility changes, archive/delete and bidirectional sync. Do not send excluded fields even if the API supports them.

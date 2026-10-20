@@ -1,0 +1,16 @@
+# Update walkthroughs
+
+All identities and content below are hypothetical, not KitDesk or IronLog facts or API fixtures. Use real discovered IDs at runtime. Expected outcomes are instruction expectations, not recorded test results.
+
+| Scenario and input | Expected behavior |
+|---|---|
+| **Happy path, body correction.** Story `demo-story-17` was refined and reviewed. The run record has the published body hash. The current Issue body equals that baseline plus a known connection footer | Show the full before/after body, diff and hashes. Approve a manifest accepting the no-CAS race. Re-read immediately and send one update with `body` only. Verify body = approved text plus the known footer. Labels and state are unchanged. Report verified; local writeback only if separately approved. |
+| **Append a design link.** The user supplies an approved mockup URL for a published story | The intended body is the current approved body plus an approved "Design" section containing the exact link. Review the link for privacy (is the design public? is it internal?). The same gates as a correction. Never send a fragment as the whole body. |
+| **New comment.** Record "Design added" on the Issue | Show the exact comment text and any approved marker, and note who it may notify. Create one comment. Verify the comment ID, Issue, author and text. Existing comments are never edited or deleted. |
+| **The connection adds a footer.** The baseline ends with an attribution footer the connection appended at creation | Build the intended body from the story text without the footer. Expect, and record as a known effect, the stored form observed for edits (e.g. text with trailing whitespace trimmed, plus one footer). Comments may get the footer appended as-is. A difference from the expected form on the first edit is a discrepancy for review, not a failure to retry. |
+| **Someone edited the Issue since publication.** The current body differs from the baseline by more than known effects | Stop before writing. Show baseline, current and intended text, and ask whether to rebase. No overwrite, even if the intended change is unrelated to the edited part. |
+| **Update request times out** | Mark uncertain and re-read. Intended content means recovered. The baseline means not applied: ask before one approved retry. Anything else is a conflict review. Never resend automatically. |
+| **Comment create times out** | List all comments with full pagination and match the marker or exact text, author and window. One match is recovered. Duplicates or an incomplete read mean stop. Don't post again. |
+| **The request also asks to "move it to Done and close it"** | Do only the approved title/body/comment. Status goes to `github-project-board` with its own approval. Closing the Issue is out of scope. |
+| **Insufficient input.** "Fix the stories on the board," with no Issue numbers, baseline or exact text | Ask for the specific Issues, the reviewed source of the change and the exact text. Return a chat-only proposal. Don't scan and edit every Issue. |
+| **A public repository and the body adds an internal URL** | Flag the URL in the privacy gate and withhold the write until the exact public content is approved. A private Project doesn't make public repository Issues private. |

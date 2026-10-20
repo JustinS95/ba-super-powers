@@ -5,7 +5,7 @@ description: Use for capability-aware GitHub Issue and Project reads or approved
 
 # GitHub Operations
 
-Shared guidance for planning, accessing, and verifying bounded GitHub operations. Connecting requires authorization. Use directly for access/read planning and recovery; compose [story publishing](../github-story-publishing/SKILL.md) for reviewed stories or [Project board](../github-project-board/SKILL.md) for board reads/Status. Full sync and general GitHub administration are outside scope.
+Shared guidance for planning, accessing, and verifying bounded GitHub operations. Connecting requires authorization. Use directly for access/read planning and recovery; compose [story publishing](../github-story-publishing/SKILL.md) for reviewed stories [Project board](../github-project-board/SKILL.md) for board reads/Status, or [story update](../github-story-update/SKILL.md) for approved title/body edits and new comments on published Issues. Full sync and general GitHub administration are outside scope.
 
 ## Inputs and contracts
 
