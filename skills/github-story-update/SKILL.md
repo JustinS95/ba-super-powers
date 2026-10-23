@@ -31,6 +31,7 @@ Ask when Issue identity, baseline, content authority, visibility or the run dest
    - **Body:** send the complete intended body, not a fragment. When appending, the intended body is the current body plus the approved addition.
    - **Connection-added text:** some connections add their own text, such as an attribution footer, to bodies and comments they write. Build the intended body from the story text without that addition, and list the expected stored form for each operation type as a known effect. Behavior can differ between creating and editing. For example, one connection appended a footer as-is when creating, but on an edit it removed the old footer, trimmed trailing whitespace and appended it once. Treat an unobserved operation type as unknown until its first verified use.
    - **Comment:** show the exact text. An approved marker such as `<!-- story-update: <run-key>/<op> -->` may be included for recovery; don't add one silently.
+   - **References:** apply COMMON's [resolvable references](../../references/COMMON.md#resolvable-references) to the text you send. Cross-references link to their targets with absolute URLs, nothing cites an artifact readers can't open, and link targets and anchors exist on the branch they point to. If a target lands with a pending merge, merge it before writing.
    - Recheck repository visibility. Review all content for secrets, personal data, @mentions and unapproved links. Mentions and comments can notify people, so call that out.
 4. **Approve an immutable manifest.** Use the [run records](../github-operations/run-records.md) template. Each operation records:
    - the target identity,
@@ -64,6 +65,7 @@ Ask when Issue identity, baseline, content authority, visibility or the run dest
   - no field outside the approved set was sent;
   - the baseline was checked immediately before writing;
   - verification compared exact content, not a returned ID alone;
+  - every cross-reference in the sent text resolves to its target;
   - discrepancies and known effects are recorded separately.
 
 See [scenarios](scenarios.md). Out of scope:

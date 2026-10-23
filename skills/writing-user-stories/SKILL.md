@@ -44,7 +44,7 @@ Identify the project's actual hierarchy, if any. For an adopted `Epic -> Feature
 
 ### 3. Draft coherent behavior slices
 
-Use [templates and examples](templates.md). Give each story a plain title, `As a / I want to / so that`, brief context, Business Value and numbered checkbox AC. Link design/source references and map requirements to AC. Use [writing-acceptance-criteria](../writing-acceptance-criteria/SKILL.md) for criterion composition or deeper AC review when needed.
+Use [templates and examples](templates.md). Give each story a plain title, `As a / I want to / so that`, brief context, Business Value and numbered checkbox AC. Link design/source references and map requirements to AC. Write every cross-reference (decisions, other stories and AC, data keys, review findings) as a link to its target with its meaning beside it, per COMMON's [resolvable references](../../references/COMMON.md#resolvable-references). Use [writing-acceptance-criteria](../writing-acceptance-criteria/SKILL.md) for criterion composition or deeper AC review when needed.
 
 Sizing checks:
 
@@ -90,6 +90,7 @@ Return coverage results, feature/story draft or scoped delta, requirement-to-AC 
 
 - Behavior and business value are specific; public contract exceptions are sourced.
 - All AC derives from evidence/confirmed decisions and has an observable test outcome.
+- Every cross-reference links to its target, and nothing cites an artifact the audience can't open.
 - No semantic loss, duplicate scope, assumed validation, permissions or metrics.
 - Story slices, tasks, titles and relations agree; hierarchy is not dependency.
 - Applicable connected review findings, unknown coverage and unavailable sources are visible.
