@@ -20,6 +20,12 @@ Input: a public repository, private Project, and proposed body containing an int
 
 Expected: identify all three as publication material, withhold create pending exact content/privacy decision. A private Project does not make public repository Issues private. Removing material is a proposed payload change needing review, not silent sanitization. Unknown visibility blocks publication even if story prose was approved.
 
+## Content gate: bare cross-references
+
+Input: a reviewed story whose context and traceability cite `D12`, `demo-story-09 AC 3`, catalogue key `X1-04` and "see learning 2026-01-05-02". The decision log has no anchors; the story repository is public.
+
+Expected: before approval, list each bare reference and propose its link (decision anchor, Issue URL plus AC number, data file) using absolute URLs. Point out that the learning note isn't readable by Issue readers, so its substance must be stated in words. Adding decision anchors is a separate repository change that must be merged before the Issue links to them. Do not insert links or anchors silently; the changed payload needs review and a new hash.
+
 ## Recovery: create timed out / add failed
 
 Input: create request timed out after submission; checkpoint has no returned ID.

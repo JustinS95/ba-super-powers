@@ -11,6 +11,20 @@ Read this file whenever a skill directs you here. These are reusable instruction
 - Story/AC describes actors, capabilities, business rules, observable outcomes, access boundaries, and feedback. Internal routes, DTOs, schemas, persistence, or layer choices belong in engineering artifacts. Exact technical details are permitted when necessary to a traceable public/external contract or explicitly technical artifact.
 - Do not infer password policy, locale, name character restrictions, financial ranges, field lengths, timing, permission identifiers, or default role propagation. Such concerns are discovery questions or exploratory test heuristics until confirmed.
 
+## Resolvable references
+
+Readers of shared or published work (stories, AC, Issues, work items, reports, PRs, plans) must be able to follow every cross-reference to the thing it names.
+
+- Write each reference to another artifact as a link to the most specific target the destination can resolve, and keep its meaning beside it: a short label, or link hover text. An ID alone (`D44`, `S-12 AC-2`, `F-01`) is not enough.
+  - **Decision:** its anchor in the decision log.
+  - **Story, feature or AC:** the published item (Issue or work item URL), or the canonical story file while unpublished, plus the AC number.
+  - **Data key or record:** the data file, plus a stable row or anchor where one exists.
+  - **Review finding or action:** its heading in the review, or the artifact it produced.
+- Use repository-relative links inside repository files. Remote items (Issues, work items, comments) need absolute URLs, because relative paths don't resolve there. Any transformation that publishes repository text converts them.
+- Never cite something the audience can't open: local notes, private learning logs, run records, private repositories or chat. State the substance in words instead.
+- Give each decision a stable anchor when it's recorded, for example a heading per decision or `<a name="d12"></a>` at the start of its table row. Never renumber or reuse decision IDs.
+- Before saving or publishing, look for bare references using the project's ID patterns, and confirm that every relative link and anchor exists on the branch readers will see. If a target exists only after a pending merge, merge first or say so. If a target can't be linked (no access, not created yet), keep the ID with a short description and report it as unresolved; never invent a URL.
+
 ## Proportionate composition
 
 Use the requested skill directly. `using-ba-super-powers` is an optional guide to choosing skills. Read shared contracts explicitly as directed; they are not automatically loaded. Compose another skill only when its capability is needed. Review small outputs locally; use cross-story adversarial matrices for connected or consequential changes. No exhaustive chain, universal two-phase chat gate, or percentage-chance trigger applies.
@@ -44,4 +58,4 @@ Read existing targets before updating. Preserve unrelated content; do not overwr
 
 ## Completion checklist
 
-Verify requested scope, source coverage, requirement traceability, unresolved decisions, output readability, destinations/collisions, applicable safety contracts, and honest execution status. List missing inputs and next decision owners. Markdown uses descriptive ATX headings and language-tagged code fences; preserve project formatting on updates. Style preferences are not business rules or safety claims.
+Verify requested scope, source coverage, requirement traceability, resolvable references, unresolved decisions, output readability, destinations/collisions, applicable safety contracts, and honest execution status. List missing inputs and next decision owners. Markdown uses descriptive ATX headings and language-tagged code fences; preserve project formatting on updates. Style preferences are not business rules or safety claims.

@@ -37,6 +37,8 @@ Use only for material uncertainty about the problem or proposed solution. Omit u
 
 ## Decisions and assumptions
 
+Give each confirmed decision a stable ID and an anchor at the start of its row, such as `<a name="d1"></a>D1: <decision>`, so stories and Issues can link straight to it ([resolvable references](../../references/COMMON.md#resolvable-references)). Never renumber or reuse IDs.
+
 | Item | Fact / assumption / proposal / confirmed decision | Evidence or decision owner/date |
 |---|---|---|
 | <item> | <classification> | <reference or confirmation needed> |
